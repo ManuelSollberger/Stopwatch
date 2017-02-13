@@ -1,5 +1,5 @@
 //
-//  SecondViewController.h
+//  AnalogStopwatchView.h
 //  Stopwatch
 //
 //  Created by Manuel on 13.02.17.
@@ -8,8 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
-@interface SecondViewController : UIViewController
+IB_DESIGNABLE
 
+@interface AnalogStopwatchView : UIView
 
 @end
-

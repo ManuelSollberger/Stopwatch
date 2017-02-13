@@ -1,18 +1,18 @@
 //
-//  FirstViewController.m
+//  SecondViewController.m
 //  Stopwatch
 //
 //  Created by Manuel on 13.02.17.
 //  Copyright © 2017 Telegraph Studios. All rights reserved.
 //
 
-#import "FirstViewController.h"
+#import "TimerController.h"
 
-@interface FirstViewController ()
+@interface TimerController ()
 
 @end
 
-@implementation FirstViewController
+@implementation TimerController
 
 - (void)viewDidLoad {
     [super viewDidLoad];

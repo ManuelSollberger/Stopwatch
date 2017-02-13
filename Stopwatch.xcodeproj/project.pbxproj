@@ -9,13 +9,14 @@
 /* Begin PBXBuildFile section */
 		6463816B1E51F6600000C5F1 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 6463816A1E51F6600000C5F1 /* main.m */; };
 		6463816E1E51F6600000C5F1 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6463816D1E51F6600000C5F1 /* AppDelegate.m */; };
-		646381711E51F6600000C5F1 /* FirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 646381701E51F6600000C5F1 /* FirstViewController.m */; };
-		646381741E51F6600000C5F1 /* SecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 646381731E51F6600000C5F1 /* SecondViewController.m */; };
+		646381711E51F6600000C5F1 /* StopwatchController.m in Sources */ = {isa = PBXBuildFile; fileRef = 646381701E51F6600000C5F1 /* StopwatchController.m */; };
+		646381741E51F6600000C5F1 /* TimerController.m in Sources */ = {isa = PBXBuildFile; fileRef = 646381731E51F6600000C5F1 /* TimerController.m */; };
 		646381771E51F6600000C5F1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 646381751E51F6600000C5F1 /* Main.storyboard */; };
 		646381791E51F6600000C5F1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 646381781E51F6600000C5F1 /* Assets.xcassets */; };
 		6463817C1E51F6600000C5F1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6463817A1E51F6600000C5F1 /* LaunchScreen.storyboard */; };
 		646381871E51F6600000C5F1 /* StopwatchTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 646381861E51F6600000C5F1 /* StopwatchTests.m */; };
 		646381921E51F6600000C5F1 /* StopwatchUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 646381911E51F6600000C5F1 /* StopwatchUITests.m */; };
+		646381A11E51FF400000C5F1 /* AnalogStopwatchView.m in Sources */ = {isa = PBXBuildFile; fileRef = 646381A01E51FF400000C5F1 /* AnalogStopwatchView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,10 +41,10 @@
 		6463816A1E51F6600000C5F1 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		6463816C1E51F6600000C5F1 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		6463816D1E51F6600000C5F1 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		6463816F1E51F6600000C5F1 /* FirstViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FirstViewController.h; sourceTree = "<group>"; };
-		646381701E51F6600000C5F1 /* FirstViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FirstViewController.m; sourceTree = "<group>"; };
-		646381721E51F6600000C5F1 /* SecondViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SecondViewController.h; sourceTree = "<group>"; };
-		646381731E51F6600000C5F1 /* SecondViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SecondViewController.m; sourceTree = "<group>"; };
+		6463816F1E51F6600000C5F1 /* StopwatchController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = StopwatchController.h; sourceTree = "<group>"; };
+		646381701E51F6600000C5F1 /* StopwatchController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = StopwatchController.m; sourceTree = "<group>"; };
+		646381721E51F6600000C5F1 /* TimerController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TimerController.h; sourceTree = "<group>"; };
+		646381731E51F6600000C5F1 /* TimerController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TimerController.m; sourceTree = "<group>"; };
 		646381761E51F6600000C5F1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		646381781E51F6600000C5F1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		6463817B1E51F6600000C5F1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -54,6 +55,8 @@
 		6463818D1E51F6600000C5F1 /* StopwatchUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = StopwatchUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		646381911E51F6600000C5F1 /* StopwatchUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = StopwatchUITests.m; sourceTree = "<group>"; };
 		646381931E51F6600000C5F1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6463819F1E51FF400000C5F1 /* AnalogStopwatchView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AnalogStopwatchView.h; sourceTree = "<group>"; };
+		646381A01E51FF400000C5F1 /* AnalogStopwatchView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AnalogStopwatchView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,12 +107,14 @@
 		646381681E51F6600000C5F1 /* Stopwatch */ = {
 			isa = PBXGroup;
 			children = (
+				6463819F1E51FF400000C5F1 /* AnalogStopwatchView.h */,
+				646381A01E51FF400000C5F1 /* AnalogStopwatchView.m */,
 				6463816C1E51F6600000C5F1 /* AppDelegate.h */,
 				6463816D1E51F6600000C5F1 /* AppDelegate.m */,
-				6463816F1E51F6600000C5F1 /* FirstViewController.h */,
-				646381701E51F6600000C5F1 /* FirstViewController.m */,
-				646381721E51F6600000C5F1 /* SecondViewController.h */,
-				646381731E51F6600000C5F1 /* SecondViewController.m */,
+				6463816F1E51F6600000C5F1 /* StopwatchController.h */,
+				646381701E51F6600000C5F1 /* StopwatchController.m */,
+				646381721E51F6600000C5F1 /* TimerController.h */,
+				646381731E51F6600000C5F1 /* TimerController.m */,
 				646381751E51F6600000C5F1 /* Main.storyboard */,
 				646381781E51F6600000C5F1 /* Assets.xcassets */,
 				6463817A1E51F6600000C5F1 /* LaunchScreen.storyboard */,
@@ -281,9 +286,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				646381741E51F6600000C5F1 /* SecondViewController.m in Sources */,
+				646381741E51F6600000C5F1 /* TimerController.m in Sources */,
+				646381A11E51FF400000C5F1 /* AnalogStopwatchView.m in Sources */,
 				6463816E1E51F6600000C5F1 /* AppDelegate.m in Sources */,
-				646381711E51F6600000C5F1 /* FirstViewController.m in Sources */,
+				646381711E51F6600000C5F1 /* StopwatchController.m in Sources */,
 				6463816B1E51F6600000C5F1 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
