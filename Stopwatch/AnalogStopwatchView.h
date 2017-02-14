@@ -8,6 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
+#define DEGREES_TO_RADIANS(degrees)((M_PI * degrees)/180)
+
 IB_DESIGNABLE
 
 @interface AnalogStopwatchView : UIView

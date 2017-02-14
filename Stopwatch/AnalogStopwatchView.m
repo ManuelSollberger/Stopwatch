@@ -14,6 +14,8 @@ float CLOCK_BORDER_DISTANCE = 16;
 float CLOCK_BORDER_SIZE = 1;
 float CLOCK_LARGE_DIGIT_LINE_WIDTH = 12;
 float CLOCK_LARGE_DIGIT_LINE_LENGTH = 36;
+float CLOCK_SMALL_DIGIT_LINE_WIDTH = 4;
+float CLOCK_SMALL_DIGIT_LINE_LENGTH = 16;
 
 // Only override drawRect: if you perform custom drawing.
 // An empty implementation adversely affects performance during animation.
@@ -27,7 +29,7 @@ float CLOCK_LARGE_DIGIT_LINE_LENGTH = 36;
     CGContextSetLineWidth(g, 1);
     CGContextStrokePath(g);
     
-    //Draw Large digits.
+    //Draw large digits.
     float centerX = rect.size.width / 2;
     float centerY = rect.size.height / 2;
     float insideRadius = (rect.size.width - (CLOCK_BORDER_DISTANCE * 2) - CLOCK_BORDER_SIZE) / 2;
@@ -40,8 +42,8 @@ float CLOCK_LARGE_DIGIT_LINE_LENGTH = 36;
     for (int i = 0; i <= 11; i++) {
         float direction = i * 30;
         
-        float sinDir = sinf(direction);
-        float conDir = cosf(direction);
+        float sinDir = sinf(DEGREES_TO_RADIANS(direction));
+        float conDir = cosf(DEGREES_TO_RADIANS(direction));
         float startX = startRadius * sinDir + centerX;
         float startY = startRadius * conDir + centerY;
         float targetX = insideRadius * sinDir + centerX;
@@ -49,6 +51,32 @@ float CLOCK_LARGE_DIGIT_LINE_LENGTH = 36;
         
         CGContextMoveToPoint(g, startX, startY);
         CGContextAddLineToPoint(g, targetX, targetY);
+    }
+    
+    CGContextSetStrokeColorWithColor(g, [[UIColor blackColor] CGColor]);
+    CGContextStrokePath(g);
+    
+    //Draw small digits.
+    startRadius = ((rect.size.width - (CLOCK_BORDER_DISTANCE * 2) - CLOCK_BORDER_SIZE) / 2) - CLOCK_SMALL_DIGIT_LINE_LENGTH;
+    
+    CGContextSetLineWidth(g, CLOCK_SMALL_DIGIT_LINE_WIDTH);
+    CGContextBeginPath(g);
+    CGContextMoveToPoint(g, centerX, centerY);
+    
+    for (int i = 1; i <= 59; i++) {
+        float direction = i * 6;
+        
+        if (fmodf(direction, 5) != 0 && direction != 0) {
+            float sinDir = sinf(DEGREES_TO_RADIANS(direction));
+            float conDir = cosf(DEGREES_TO_RADIANS(direction));
+            float startX = startRadius * sinDir + centerX;
+            float startY = startRadius * conDir + centerY;
+            float targetX = insideRadius * sinDir + centerX;
+            float targetY = insideRadius * conDir + centerY;
+            
+            CGContextMoveToPoint(g, startX, startY);
+            CGContextAddLineToPoint(g, targetX, targetY);
+        }
     }
     
     CGContextSetStrokeColorWithColor(g, [[UIColor blackColor] CGColor]);
