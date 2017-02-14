@@ -17,6 +17,8 @@ float CLOCK_LARGE_DIGIT_LINE_LENGTH = 36;
 float CLOCK_SMALL_DIGIT_LINE_WIDTH = 4;
 float CLOCK_SMALL_DIGIT_LINE_LENGTH = 16;
 float CLOCK_SECONDS_ARM_WIDTH = 4;
+float CLOCK_SECONDS_ARM_END_OFFSET = 64;
+float CLOCK_SECONDS_ARM_START_OVERHANG = -32;
 float CLOCK_SECONDS_ARM_CIRCLE_SIZE = 32;
 
 // Only override drawRect: if you perform custom drawing.
@@ -97,7 +99,17 @@ float CLOCK_SECONDS_ARM_CIRCLE_SIZE = 32;
     float sinSec = sinf(DEGREES_TO_RADIANS(secondsDegrees));
     float cosSec = cosf(DEGREES_TO_RADIANS(secondsDegrees));
     
-    //CGContextMoveToPoint(g, startX, startY);
+    float startX = sinSec * CLOCK_SECONDS_ARM_START_OVERHANG + centerX;
+    float startY = cosSec * CLOCK_SECONDS_ARM_START_OVERHANG + centerY;
+    float targetX = sinSec * (insideRadius - CLOCK_SECONDS_ARM_END_OFFSET) + centerX;
+    float targetY = cosSec * (insideRadius - CLOCK_SECONDS_ARM_END_OFFSET) + centerY;
+    
+    CGContextMoveToPoint(g, startX, startY);
+    CGContextAddLineToPoint(g, targetX, targetY);
+    
+    CGContextSetStrokeColorWithColor(g, [[UIColor redColor] CGColor]);
+    CGContextSetFillColorWithColor(g, [[UIColor redColor] CGColor]);
+    
 }
 
 
