@@ -16,6 +16,8 @@ float CLOCK_LARGE_DIGIT_LINE_WIDTH = 12;
 float CLOCK_LARGE_DIGIT_LINE_LENGTH = 36;
 float CLOCK_SMALL_DIGIT_LINE_WIDTH = 4;
 float CLOCK_SMALL_DIGIT_LINE_LENGTH = 16;
+float CLOCK_SECONDS_ARM_WIDTH = 4;
+float CLOCK_SECONDS_ARM_CIRCLE_SIZE = 32;
 
 // Only override drawRect: if you perform custom drawing.
 // An empty implementation adversely affects performance during animation.
@@ -81,6 +83,21 @@ float CLOCK_SMALL_DIGIT_LINE_LENGTH = 16;
     
     CGContextSetStrokeColorWithColor(g, [[UIColor blackColor] CGColor]);
     CGContextStrokePath(g);
+    
+    //Draw center fix point.
+    CGContextSetFillColorWithColor(g, [[UIColor blackColor] CGColor]);
+    CGContextAddEllipseInRect(g, CGRectMake(centerX - 4, centerY - 4, 8, 8));
+    CGContextFillPath(g);
+    
+    //Draw seconds arm.
+    CGContextBeginPath(g);
+    
+    float secondsDegrees = _seconds * 6;
+    
+    float sinSec = sinf(DEGREES_TO_RADIANS(secondsDegrees));
+    float cosSec = cosf(DEGREES_TO_RADIANS(secondsDegrees));
+    
+    //CGContextMoveToPoint(g, startX, startY);
 }
 
 

@@ -14,4 +14,8 @@ IB_DESIGNABLE
 
 @interface AnalogStopwatchView : UIView
 
+@property int hours;
+@property int minutes;
+@property float seconds;
+
 @end
